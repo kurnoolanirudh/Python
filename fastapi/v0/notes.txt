@@ -1,0 +1,34 @@
+Python virtual environment - pyenv
+
+To start the API type = uvicorn <filename>:app or uvicorn <folder-name>.<filename>:app
+
+To start the API with hot reloading type = uvicorn <filename>:app --reload or uvicorn <folder-name>.<filename>:app --reload
+
+When the API gets a request fastapi tries to match the HTTP method and the path. The first match gets executed and thats it. So the order in which the path operation functions are defined matters
+
+Schema for requests ( a contract between the client and server regarding the structure of a request )
+client following a schema is useful to validate data.
+all the schema stuff is done using pydantic
+
+CRUD              HTTP Method
+C - Create           POST
+R - Read             GET
+U - Update        PUT / PATCH
+D - Delete          DELETE
+
+PUT   = its necessary send to all the unchanged info with the changed info to server
+PATCH = only changed info needs to be sent to the server
+
+fastapi automatically generated documentation for the API 
+    for swagger UI we have to go to /docs route
+    for redoc UI we have to go to /redoc route
+
+In python a package = a folder full of python code files. But for a folder to be considered as a package that folder should have a dummy __init__.py file
+
+To work with a postgres database we need a python package called "pyscopg2"
+
+pydantic used to validate and parse user requests 
+sql alchemy a python api which compiles down to SQL queries
+
+pydantic models    = define the shape of the requests 
+sql alchemy models = defines the shape of the database table

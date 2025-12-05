@@ -1,0 +1,12 @@
+Robot = a general automation framework
+Robot has a modular Architechture
+
+--- The Stack ---
+Data
+Robot framework
+Libraries
+Tools (Selenium, Playright ..etc)
+Target System
+
+Robot doesn't directly communicate with target system other libraries are required
+The code for robot framework is written in a DSL

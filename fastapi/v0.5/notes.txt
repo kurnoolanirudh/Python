@@ -1,0 +1,39 @@
+async - await in python
+Asynchronous code just means that the language has a way to tell the computer / program that at some point in the code, it will have to wait for something else to finish somewhere else.
+It's called "asynchronous" because the computer / program doesn't have to be "synchronized" with the slow task, waiting for the exact moment that the task finishes, while doing nothing, to be able to take the task result and continue the work.
+Instead of that, by being an "asynchronous" system, once finished, the task can wait in line a little bit (some microseconds) for the computer / program to finish whatever it went to do, and then come back to take the results and continue working with them.
+This idea of asynchronous code described above is also sometimes called "concurrency". It is different from "parallelism".
+Concurrency and parallelism both relate to "different things happening more or less at the same time".
+But the details between concurrency and parallelism are quite different.
+it makes a lot of sense to use asynchronous code for web APIs.
+I/O bound => concurrency 
+CPU bound => parallelism
+await" allowed only within async function ??? 
+Coroutine is just the very fancy term for the thing returned by an async def function. Python knows that it is something like a function, that it can start and that it will end at some point, but that it might be paused ⏸ internally too, whenever there is an await inside of it.
+But all this functionality of using asynchronous code with async and await is many times summarized as using "coroutines". It is comparable to the main key feature of Go, the "Goroutines".
+concurrency = make a blocking op non blocking (blocking op ex = CPU waiting for a I/O task to be done and being idle in the mean time )
+As environment variables can be set outside of the code, but can be read by the code, and don't have to be stored (committed to git) with the rest of the files, it's common to use them for configurations or settings.
+
+There is a special environment variable called PATH that is used by the operating systems (Linux, macOS, Windows) to find programs to run.
+The value of the variable PATH is a long string that is made of directories separated by a colon : on Linux and macOS, and by a semicolon ; on Windows.
+For example, the PATH environment variable could look like this:
+
+Linux, macOS :
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+This means that the system should look for programs in the directories:
+
+/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+
+When you type a command in the terminal, the operating system looks for the program in each of those directories listed in the PATH environment variable.
+For example, when you type python in the terminal, the operating system looks for a program called python in the first directory in that list.
+If it finds it, then it will use it. Otherwise it keeps looking in the other directories.
+A virtual environment is a directory, very similar to the global one, where you can install the packages for a project.
+When you activate a virtual environment, It will create or modify some environment variables that will be available for the next commands.
+Activating a virtual environment adds its path .venv/bin (on Linux and macOS) or .venv\Scripts (on Windows) to the PATH environment variable.
+An important detail is that it will put the virtual environment path at the beginning of the PATH variable. The system will find it before finding any other Python available. This way, when you run python, it will use the Python from the virtual environment instead of any other python (for example, a python from a global environment).
+
+to check if a virtual environment is active run "which python"

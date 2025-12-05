@@ -1,0 +1,10 @@
+Steps
+(1) Set the environment variable using : export FLASK_APP=main.py
+(2) Type the command : flask run
+(3) To enable hot reloading : export FLASK_DEBUG=1
+
+Another way is to add the following code block to main.py
+if __name__ == "__main__":
+    app.run(debug=True)
+
+another name for http://127.0.0.1:8000/ is localhost ???

@@ -1,0 +1,8 @@
+To get list of all sub commands type : django-admin
+To start a new django project : django-admin startproject learn
+To run the project : python3 manage.py runserver
+
+route handling is done in urls.py file
+WSGI vs ASGI ???
+
+another name for http://127.0.0.1:8000/ is localhost ???
